@@ -12,13 +12,17 @@
 </head>
 <body>
   <div id="app">
+    
     <div v-if="isLoading">
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="">
     </div>
-    <h1 v-else >Lista Email</h1>
-    <ul>
-      <li v-for="email in emailArray">{{email}}</li>
-    </ul>
+
+    <div v-else>
+      <h1>Lista Email</h1>
+      <ul>
+        <li v-for="email in emailArray">{{email}}</li>
+      </ul>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
