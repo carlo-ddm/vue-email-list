@@ -7,13 +7,19 @@
   <!-- CDN VUE JS -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <!-- CDN AXIOS -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Ex Boolean Axios</title>
 </head>
 <body>
   <div id="app">
-
+    <div v-if="isLoading">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="">
+    </div>
+    <h1 v-else >Lista Email</h1>
+    <ul>
+      <li v-for="email in emailArray">{{email}}</li>
+    </ul>
   </div>
-  <script class="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
